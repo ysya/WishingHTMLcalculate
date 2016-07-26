@@ -57,6 +57,8 @@
             var CalculateAll = CardinalNo * FirmSite * UserNo * OneUser
             console.log("計算結果: " + CalculateAll.toString())
             document.getElementById('result').value = CalculateAll.toString();
+            var YearFee = CalculateAll / 100 * 30
+            document.getElementById('yearfee_result').value = YearFee.toString();
         }
     </script>
 </head>
@@ -73,7 +75,10 @@
         <button type="button" onclick="getCountry()">計算</button>
         <button type="reset" value="Reset"  onclick="reset()">Reset</button>
         <br>
-        計算結果: <input type="text" style="border:none" id="result" value="0" readonly><br>
+        計算結果: <input type="text" style="border:none" id="result" value="0" readonly><br><br>
+        年費為定價之 30% ：<input type="text" style="border:none" id="yearfee_result" value="0" readonly><br><br>
+
+
     </form>
     
 </body>
