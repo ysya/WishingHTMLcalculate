@@ -56,24 +56,24 @@
             console.log(OneUser);
             var CalculateAll = CardinalNo * FirmSite * UserNo * OneUser
             console.log("計算結果: " + CalculateAll.toString())
-            document.getElementById('result').innerHTML = "計算結果: " + CalculateAll.toString();
+            document.getElementById('result').value = CalculateAll.toString();
         }
     </script>
 </head>
 
 <body>
     <form name="formCalc" id="formCalc">
-        <input type="radio" name="SoftName" value="Science_M" checked="checked">化學雲中階 <br>
-        <input type="radio" name="SoftName" value="Legal_L">法規雲低接 <br>
-        <input type="radio" name="SoftName" value="Legal_M">法規雲中階 <br>
-        <input type="radio" name="SoftName" value="Legal_H">法規雲高階 <br>
-        <input type="radio" name="SoftName" value="Alerm_L">定檢雲低階 <br>
-        廠商數目<input type="number" name="FirmNo" min="1" value="1"><br>
-        使用者人數<input type="number" name="UserNo" min="1" value="1"><br>
-        <button type="button" onclick="getCountry()">判斷</button>
-        <button type="reset" value="Reset">Reset</button>
+        <input type="radio" name="SoftName" value="Science_M" checked="checked">化學雲-中階 <br>
+        <input type="radio" name="SoftName" value="Legal_L">法規雲-低階 <br>
+        <input type="radio" name="SoftName" value="Legal_M">法規雲-中階 <br>
+        <input type="radio" name="SoftName" value="Legal_H">法規雲-高階 <br>
+        <input type="radio" name="SoftName" value="Alerm_L">定檢雲-低階 <br>
+        廠商數目: <input type="number" name="FirmNo" min="1" value="1"><br>
+        使用者人數: <input type="number" name="UserNo" min="1" value="1"><br>
+        <button type="button" onclick="getCountry()">計算</button>
+        <button type="reset" value="Reset"  onclick="reset()">Reset</button>
         <br>
-        <p id="result">計算結果:</p>
+        計算結果: <input type="text" style="border:none" id="result" value="0" readonly><br>
     </form>
     
 </body>
