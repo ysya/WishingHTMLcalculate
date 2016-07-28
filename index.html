@@ -2,9 +2,17 @@
 <html lang="en">
 
 <head>
-    <title>試算</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <h1>費率試算</h1>
+    <title>試算</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--BootStrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--pure-->
+    <link rel="stylesheet" href="css/pure-min.css">
+        <link rel="stylesheet" href="css/grids-responsive-min.css">
+        <link rel="stylesheet" href="css/layouts/blog.css">
     <script type="text/javascript">
         function getCountry() {
             console.log("in getCountry");
@@ -64,23 +72,58 @@
 </head>
 
 <body>
-    <form name="formCalc" id="formCalc">
-        <input type="radio" name="SoftName" value="Science_M" checked="checked">化學雲-中階 <br>
-        <input type="radio" name="SoftName" value="Legal_L">法規雲-低階 <br>
-        <input type="radio" name="SoftName" value="Legal_M">法規雲-中階 <br>
-        <input type="radio" name="SoftName" value="Legal_H">法規雲-高階 <br>
-        <input type="radio" name="SoftName" value="Alerm_L">定檢雲-低階 <br>
-        廠商數目: <input type="number" name="FirmNo" min="1" value="1"><br>
-        使用者人數: <input type="number" name="UserNo" min="1" value="1"><br>
-        <button type="button" onclick="getCountry()">計算</button>
-        <button type="reset" value="Reset"  onclick="reset()">Reset</button>
-        <br>
-        計算結果: <input type="text" style="border:none" id="result" value="0" readonly><br><br>
-        年費為定價之 30% ：<input type="text" style="border:none" id="yearfee_result" value="0" readonly><br><br>
-
-
-    </form>
-    
+    <div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+            <h1 class="brand-title">WhishingSoft 軟體估價小工具</h1>
+            <!--<h2 class="brand-tagline">Creating a blog layout using Pure</h2>-->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="pure-button" href="">button</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="pure-button" href="">button</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <form name="formCalc" id="formCalc">
+            <div class="pure-form"> <!-- Radio group -->
+                <legend>請選擇產品</legend>
+                <div class="pure-radio">
+                    <label for=""><input type="radio" name="SoftName" id="1" value="Science_M" checked="checked">化學雲-中階</label><br>
+                    <label for=""><input type="radio" name="SoftName" value="Legal_L">法規雲-低階</label><br>
+                    <label for=""><input type="radio" name="SoftName" value="Legal_M">法規雲-中階</label><br>
+                    <label for=""><input type="radio" name="SoftName" value="Legal_H">法規雲-高階</label><br>
+                    <label for=""><input type="radio" name="SoftName" value="Alerm_L">定檢雲-低階</label><br>
+            </div>
+            <legend>廠數</legend>
+            <input type="number" name="FirmNo" min="1" value="1"><br><br>
+            <legend>使用者人數</legend>
+            <input type="number" name="UserNo" min="1" value="1"><br><br>
+            <button class="pure-button" type="button" onclick="getCountry()">
+                <i class="fa fa-calculator" aria-hidden="true"></i>計算
+            </button>
+            <button class="pure-button" type="reset" value="Reset"  onclick="reset()">
+                <i class="fa fa-repeat" aria-hidden="true"></i>重設
+            </button>
+            <br><br><br>
+            計算結果: <input type="text" style="border:none" id="result" value="0" readonly><br><br>
+            年費為定價之 30% ：<input type="text" style="border:none" id="yearfee_result" value="0" readonly><br><br>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="pure-menu pure-menu-horizontal">
+            <ul>
+                <li class="pure-menu-item"><a href="" class="pure-menu-link">About</a></li>
+                <li class="pure-menu-item"><a href="" class="pure-menu-link">Facebook</a></li>
+                <li class="pure-menu-item"><a href="" class="pure-menu-link">Mail us</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 
 </html>
