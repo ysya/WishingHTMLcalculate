@@ -15,9 +15,9 @@
         <link rel="stylesheet" href="css/layouts/blog.css">
     <script type="text/javascript">
         function getCountry() {
-            console.log("in getCountry");
+            // console.log("in getCountry");
             var SoftName = document.querySelector('input[name = "SoftName"]:checked').value;
-            console.log(SoftName);
+            // console.log(SoftName);
             if (SoftName == "Science_M") {
                 CardinalNo = 1;
             }else if (SoftName == "Legal_L"){
@@ -29,7 +29,7 @@
             }else if (SoftName == "Alerm_L"){
                 CardinalNo = 0.7;
             }
-            console.log("運算方式: " + CardinalNo.toString());
+            // console.log("運算方式: " + CardinalNo.toString());
             var FirmNo = document.querySelector('[name="FirmNo"]').value;
             var FirmSite;
             if (FirmNo == 1){
@@ -43,8 +43,8 @@
             }else if(FirmNo >= 5){
                 FirmSite = 2.2;
             }
-            console.log("廠商數: " + FirmNo.toString());
-            console.log("廠商Site: " + FirmSite.toString());  
+            // console.log("廠商數: " + FirmNo.toString());
+            // console.log("廠商Site: " + FirmSite.toString());  
             var UserNo = document.querySelector('[name="UserNo"]').value;
             var OneUser = 0;
             if (1 <= UserNo && UserNo < 10){
@@ -58,12 +58,12 @@
             }else if (25 <= UserNo){
                 OneUser = 2.5 * 0.75;
             }
-            console.log("使用者數目: " + UserNo.toString());
-            console.log(UserNo);
-            console.log("單一使用者報價: " + OneUser.toString());
-            console.log(OneUser);
+            // console.log("使用者數目: " + UserNo.toString());
+            // console.log(UserNo);
+            // console.log("單一使用者報價: " + OneUser.toString());
+            // console.log(OneUser);
             var CalculateAll = CardinalNo * FirmSite * UserNo * OneUser
-            console.log("計算結果: " + CalculateAll.toString())
+            // console.log("計算結果: " + CalculateAll.toString())
             document.getElementById('result').value = CalculateAll.toString();
             var YearFee = CalculateAll / 100 * 30
             document.getElementById('yearfee_result').value = YearFee.toString();
@@ -96,16 +96,18 @@
             <div class="pure-form"> <!-- Radio group -->
                 <legend>請選擇產品</legend>
                 <div class="pure-radio">
-                    <label for="radio1"><input id="radio1" type="radio" name="SoftName" value="Science_M" checked="checked">化學雲-中階</label><br>
-                    <label for="radio2"><input id="radio2" type="radio" name="SoftName" value="Legal_L">法規雲-低階</label><br>
-                    <label for="radio3"><input id="radio3" type="radio" name="SoftName" value="Legal_M">法規雲-中階</label><br>
-                    <label for="radio4"><input id="radio4" type="radio" name="SoftName" value="Legal_H">法規雲-高階</label><br>
-                    <label for="radio5"><input id="radio5" type="radio" name="SoftName" value="Alerm_L">定檢雲-低階</label><br>
+                    <ol>
+                    <li><label for="radio1"><input id="radio1" type="radio" name="SoftName" value="Science_M" checked="checked">&nbsp;化學雲-中階</label><br>
+                    <li><label for="radio2"><input id="radio2" type="radio" name="SoftName" value="Legal_L">&nbsp;法規雲-低階</label><br>
+                    <li><label for="radio3"><input id="radio3" type="radio" name="SoftName" value="Legal_M">&nbsp;法規雲-中階</label><br>
+                    <li><label for="radio4"><input id="radio4" type="radio" name="SoftName" value="Legal_H">&nbsp;法規雲-高階</label><br>
+                    <li><label for="radio5"><input id="radio5" type="radio" name="SoftName" value="Alerm_L">&nbsp;定檢雲-低階</label><br>
+                    </ol>
             </div>
             <legend>廠數</legend>
             <input type="number" name="FirmNo" min="1" value="1"><br>
             <legend>使用者人數</legend>
-            <input type="number" name="UserNo" min="1" value="1"><br><br>
+            <input type="number" name="UserNo" min="1" value="5"><br><br>
             <button class="pure-button" type="button" onclick="getCountry()">
                 <i class="fa fa-calculator" aria-hidden="true"></i>計算
             </button>
