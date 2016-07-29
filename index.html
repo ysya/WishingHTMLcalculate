@@ -32,6 +32,7 @@
             CardinalNo = 0.7;
         }
         // console.log("運算方式: " + CardinalNo.toString());
+        // Change number of factory here 
         var FirmNo = document.querySelector('[name="FirmNo"]').value;
         var FirmSite;
         if (FirmNo == 1) {
@@ -46,7 +47,8 @@
             FirmSite = 2.2;
         }
         // console.log("廠商數: " + FirmNo.toString());
-        // console.log("廠商Site: " + FirmSite.toString());  
+        // console.log("廠商Site: " + FirmSite.toString());
+        // Change User number here  
         var UserNo = document.querySelector('[name="UserNo"]').value;
         var OneUser = 0;
         if (1 <= UserNo && UserNo < 10) {
@@ -71,6 +73,7 @@
         document.getElementById('yearfee_result').value = YearFee.toString();
     }
     </script>
+    
 </head>
 
 <body>
@@ -104,7 +107,7 @@
                                         <ol>
                                             <li>
                                                 <label for="radio1">
-                                                <input id="radio1" type="radio" name="SoftName" value="Science_M" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1" checked="">&nbsp;化學雲-中階</label>
+                                                <input id="radio1" type="radio" name="SoftName" value="Science_M" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1" checked>&nbsp;化學雲-中階</label>
                                                 <br>
                                             </li>
                                             <li>
@@ -163,7 +166,7 @@
                                 </h4>
                                 </a>
                             </div>
-                            <div id="collapse1" class="panel-collapse collapse in">
+                            <div id="collapse1" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <p>DEMO</p>
                                 </div>
@@ -177,7 +180,7 @@
                                 </h4>
                                 </a>
                             </div>
-                        <div id="collapse2" class="panel-collapse collapse in">
+                        <div id="collapse2" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>DEMO</p>
                             </div>
@@ -191,7 +194,7 @@
                                 </h4>
                                 </a>
                             </div>
-                            <div id="collapse3" class="panel-collapse collapse in">
+                            <div id="collapse3" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <p>DEMO</p>
                                 </div>
@@ -205,7 +208,7 @@
                                 </h4>
                                 </a>
                             </div>
-                            <div id="collapse4" class="panel-collapse collapse in">
+                            <div id="collapse4" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <p>DEMO</p>
                                 </div>
@@ -219,7 +222,7 @@
                                 </h4>
                                 </a>
                             </div>
-                            <div id="collapse5" class="panel-collapse collapse in">
+                            <div id="collapse5" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <p>DEMO</p>
                                 </div>
